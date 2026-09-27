@@ -1,7 +1,5 @@
-import About, { generateMetadata } from "./about/page";
-
-export { generateMetadata };
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return <About />;
+  redirect("/about");
 }
