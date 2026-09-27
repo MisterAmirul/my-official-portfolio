@@ -98,7 +98,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Amirul is a graduate of University Kuala Lumpur (MIIT) with a Diploma in Information Technology. Driven by a curiosity for exploring diverse technology domains, he has developed a broad understanding of both technical and business-oriented systems, embracing a T-shaped professional mindset.
+        Amirul is a graduate of University Kuala Lumpur, MIIT, with a Diploma in Information Technology. Driven by a curiosity for exploring diverse technology domains, he has developed a broad understanding of both technical and business-oriented systems, embracing a T-shaped professional mindset.
         <br />
         <br />
         Through continuous research, reading, and self-directed learning, he translates theoretical knowledge into hands-on experience in areas such as modern web development, hosting infrastructure, containerization, system administration, and system architectural .
