@@ -5,8 +5,8 @@ const person: Person = {
   firstName: "Amirul",
   lastName: "Hezzat",
   name: `Amirul Hezzat`,
-  role: "MLOps Intern",
-  avatar: "/images/myavatar.jpg", 
+  role: "Aspiring IT System Engineer",
+  avatar: "/images/persona-portfolio.jpg", 
   email: "example@gmail.com",
   location: "Asia/Kuala_Lumpur", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
@@ -101,7 +101,7 @@ const about: About = {
         Amirul is a graduate of University Kuala Lumpur (MIIT) with a Diploma in Information Technology. Driven by a curiosity for exploring diverse technology domains, he has developed a broad understanding of both technical and business-oriented systems, embracing a T-shaped professional mindset.
         <br />
         <br />
-        Through continuous research, reading, and self-directed learning, he translates theoretical knowledge into hands-on experience in areas such as modern web development, infrastructure, data science, system administration, and operationalizing machine learning models.
+        Through continuous research, reading, and self-directed learning, he translates theoretical knowledge into hands-on experience in areas such as modern web development, hosting infrastructure, containerization, system administration, and system architectural .
       </>
     ),
   },
@@ -241,6 +241,11 @@ const skills: Skills = {
   description: `${person.name}'s certifications, learning journey, and technical skills`,
   
   certifications: [
+      {
+      name: "Google Cloud",
+      image: "/images/qualifications/syllabus1-ai200.png",
+      link: "https://learn.microsoft.com/api/achievements/share/en-us/MUHAMADAMIRULHEZZATBINWANAHMAD-3047/3ZBL3DBH?sharingId=194FC49822E4ED2A",
+    },
     {
       name: "Google Cloud",
       image: "/images/qualifications/gke-gcp.png",
@@ -251,11 +256,7 @@ const skills: Skills = {
       image: "/images/qualifications/gpu-fund.png",
       link: "https://www.skills.google/public_profiles/e364194e-4c7a-4471-bd36-959d262cbbbe/badges/24619248",
     },
-    {
-      name: "Google Cloud",
-      image: "/images/qualifications/vertex-fund.png",
-      link: "https://www.skills.google/public_profiles/e364194e-4c7a-4471-bd36-959d262cbbbe",
-    },
+
 
     {
       name: "Google Cloud",
@@ -285,7 +286,7 @@ const skills: Skills = {
     },
     {
       category: "Infrastructure",
-      skills: ["Hosting", "Load Balancer", "Docker", "Blockchain"],
+      skills: ["Hosting", "Load Balancer", "Azure Docker Service", "Azure Kubernetes Service", "Blockchain"],
     },
     {
       category: "Artificial Intelligence",
@@ -293,7 +294,7 @@ const skills: Skills = {
     },
     {
       category: "System Administration",
-      skills: ["Linux", "Bash"],
+      skills: ["Linux", "Bash", "Windows"],
     },
     {
       category: "Tools",

@@ -70,7 +70,7 @@
 
 .zoom-out-avatar img {
   object-fit: contain !important;
-  transform: scale(1.27);
+  transform: scale(1.45);
 }
 
 .cert-grid {

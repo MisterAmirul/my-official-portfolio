@@ -73,7 +73,7 @@ export default function SkillsPage() {
       {/* Certifications Section */}
       <Column id="Learning Badges" fillWidth gap="l">
         <Heading as="h2" variant="display-strong-s">
-          Credentials
+          Learning Badges
         </Heading>
         <div className="cert-grid">
           {skills.certifications.map((cert, index) => (
