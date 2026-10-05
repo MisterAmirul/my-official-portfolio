@@ -4,8 +4,8 @@ import { Line, Row, Text } from "@once-ui-system/core";
 const person: Person = {
   firstName: "Amirul",
   lastName: "Hezzat",
-  name: `Amirul Hezzat`,
-  role: "Aspiring IT System Engineer",
+  name: ` Amirul Hezzat`,
+  role: "Backend Cloud Developer",
   avatar: "/images/persona-portfolio.jpg", 
   email: "example@gmail.com",
   location: "Asia/Kuala_Lumpur", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -22,6 +22,12 @@ const social: Social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   // Set essentials: true for links you want to show on the about page
+  {
+    name: "Curriculum Vitae",
+    icon: "document",
+    link: "/images/Cv-AmirulHezzat.pdf",
+    essential: true,
+  },
   {
     name: "GitHub",
     icon: "github",
@@ -43,7 +49,7 @@ const social: Social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:amirul.hezzat@s.unikl.edu.my",
+    link: "mailto:amirulhz.dev@outlook.com",
     essential: true,
   },
 ];
@@ -98,10 +104,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Amirul is a graduate of University Kuala Lumpur, MIIT, with a Diploma in Information Technology. Driven by a curiosity for exploring diverse technology domains, he has developed a broad understanding of both technical and business-oriented systems, embracing a T-shaped professional mindset.
+        Amirul is a final-year Information Technology Diploma student at Universiti Kuala Lumpur MIIT, actively shaping his career toward becoming a Backend Cloud Developer. Driven by a curiosity for diverse technology domains, he embraces a T-shaped professional mindset, blending a broad understanding of IT ecosystems with deep technical specialization.
         <br />
         <br />
-        Through continuous research, reading, and self-directed learning, he translates theoretical knowledge into hands-on experience in areas such as modern web development, hosting infrastructure, containerization, system administration, and system architectural .
+        Through hands-on projects and continuous self-directed learning, he translates theoretical knowledge into production-ready solutions. His expertise spans Azure cloud infrastructure, AI integrations, full-stack web development, and deploying containerized applications utilizing Docker and Kubernetes.
       </>
     ),
   },
@@ -111,27 +117,30 @@ const about: About = {
     experiences: [
       {
         company: "University Kuala Lumpur MIIT",
-        timeframe: "2024 - 2027",
+        timeframe: "July 2024 - December 2026",
         role: "Diploma in Information Technology",
         achievements: [
           <>
             Completed extensive 6 semester of various syllabus learning covering fundamental of information technologies, multi-language programming, database, design principles, statistical analysis, discrete mathematics and more.
           </>,
           <>
-            Exposure to various real-world case studies, ethical dicsussion, hands-on projects and well-rounded theoretical and practical understanding of the IT industry.
+            Engaged in real-world case studies, hands-on development projects, and ethical discussions, building a strong foundation in both theoretical and practical applications of technology.
           </>,
         ],
       },
       {
-        company: "SMK Mergong",
-        timeframe: "2016 - 2021",
-        role: "Technical  Stream",
+company: "Professional Certifications & Training",
+        timeframe: "",
+        role: "Azure & AWS Cloud Tracks",
         achievements: [
           <>
-            Initial exposure to various technical subjects such as engineering drawing, physics, mathematics, providing a strong foundation for further studies in IT.
+            <strong>Azure AI 200 Cloud Developer:</strong> Currently preparing for the Azure AI Engineer Associate certification exam (expected 11 October 2026), focusing on maximizing Azure Services with AI integration.
           </>,
           <>
-            Developed discipline, teamwork, problem-solving abilities, and a strong interest in innovation through academic and extracurricular activities.
+            <strong>AWS Cloud Foundational:</strong> Participating in the Project Ignite training program (12 Oct 2026 - 27 Feb 2027) to expand multicloud infrastructure capabilities.
+          </>,
+          <>
+            <strong>Platform Skill Badges:</strong> Earned multiple hands-on credentials across Microsoft Azure (AKS, Container Apps, Databricks) and Google Cloud (Cloud GPUs, MLOps Fundamentals, Kubernetes).
           </>,
         ],
         images: [],
@@ -286,11 +295,15 @@ const skills: Skills = {
     },
     {
       category: "Infrastructure",
-      skills: ["Hosting", "Load Balancer", "Azure Docker Service", "Azure Kubernetes Service", "Blockchain"],
+      skills: ["Azure Cloud Services", "Docker", "Kubernetes", "Local Server Configuration", "Nginx", "Blockchain"],
     },
     {
       category: "Artificial Intelligence",
       skills: ["Statistical Analysis", "Model Development", "GPU Computing"],
+    },
+      {
+      category: "Database",
+      skills: ["PostgreSQL", "NoSQL", "OpenAI Vector Embeddings models"],
     },
     {
       category: "System Administration",
