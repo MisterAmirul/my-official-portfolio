@@ -29,6 +29,9 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
       const checkRouteEnabled = () => {
         if (!pathname) return false;
 
+        // The root page redirects to the configured landing page even when its nav item is hidden.
+        if (pathname === "/") return true;
+
         if (pathname in routes) {
           return routes[pathname as keyof typeof routes];
         }
