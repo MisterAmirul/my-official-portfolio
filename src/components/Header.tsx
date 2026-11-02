@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, blog, work, gallery, skills } from "@/resources";
+import { routes, display, person, about, work, gallery, skills } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -48,7 +48,7 @@ export const Header = () => {
 
   return (
     <>
-      <Fade s={{ hide: true }} fillWidth position="fixed" height="80" zIndex={9} />
+      <Fade s={{ hide: true }} fillWidth position="fixed" height="104" zIndex={9} />
       <Fade
         hide
         s={{ hide: false }}
@@ -56,7 +56,7 @@ export const Header = () => {
         position="fixed"
         bottom="0"
         to="top"
-        height="80"
+        height="104"
         zIndex={9}
       />
       <Row
@@ -80,15 +80,16 @@ export const Header = () => {
           <Row
             background="page"
             border="neutral-alpha-weak"
-            radius="m-4"
+            radius="l-4"
             shadow="l"
-            padding="4"
+            padding="8"
             horizontal="center"
             zIndex={1}
+            className={styles.floatingNav}
           >
-            <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
+            <Row gap="8" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} size="l" />
               )}
 
               {routes["/about"] && (
@@ -99,6 +100,7 @@ export const Header = () => {
                       href="/about"
                       label={about.label}
                       selected={pathname === "/about"}
+                      size="l"
                     />
                   </Row>
                   <Row hide s={{ hide: false }}>
@@ -106,6 +108,7 @@ export const Header = () => {
                       prefixIcon="person"
                       href="/about"
                       selected={pathname === "/about"}
+                      size="l"
                     />
                   </Row>
                 </>
@@ -114,10 +117,11 @@ export const Header = () => {
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="rocket" // You can choose any icon from src/resources/icons.ts
+                      prefixIcon="rocket"
                       href="/skills"
                       label={skills.label}
                       selected={pathname.startsWith("/skills")}
+                      size="l"
                     />
                   </Row>
                   <Row hide s={{ hide: false }}>
@@ -125,6 +129,7 @@ export const Header = () => {
                       prefixIcon="rocket"
                       href="/skills"
                       selected={pathname.startsWith("/skills")}
+                      size="l"
                     />
                   </Row>
                 </>
@@ -138,6 +143,7 @@ export const Header = () => {
                       href="/work"
                       label={work.label}
                       selected={pathname.startsWith("/work")}
+                      size="l"
                     />
                   </Row>
                   <Row hide s={{ hide: false }}>
@@ -145,31 +151,12 @@ export const Header = () => {
                       prefixIcon="grid"
                       href="/work"
                       selected={pathname.startsWith("/work")}
+                      size="l"
                     />
                   </Row>
                 </>
               )}
 
-              
-              {routes["/blog"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="book"
-                      href="/blog"
-                      label={blog.label}
-                      selected={pathname.startsWith("/blog")}
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="book"
-                      href="/blog"
-                      selected={pathname.startsWith("/blog")}
-                    />
-                  </Row>
-                </>
-              )}
               {routes["/gallery"] && (
                 <>
                   <Row s={{ hide: true }}>
@@ -178,6 +165,7 @@ export const Header = () => {
                       href="/gallery"
                       label={gallery.label}
                       selected={pathname.startsWith("/gallery")}
+                      size="l"
                     />
                   </Row>
                   <Row hide s={{ hide: false }}>
@@ -185,14 +173,15 @@ export const Header = () => {
                       prefixIcon="gallery"
                       href="/gallery"
                       selected={pathname.startsWith("/gallery")}
+                      size="l"
                     />
                   </Row>
                 </>
               )}
               {display.themeSwitcher && (
                 <>
-                  <Line background="neutral-alpha-medium" vert maxHeight="24" />
-                  <ThemeToggle />
+                  <Line background="neutral-alpha-medium" vert maxHeight={28} />
+                  <ThemeToggle size="l" />
                 </>
               )}
             </Row>

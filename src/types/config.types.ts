@@ -182,3 +182,4 @@ export type OnceUIConfig = {
   effects: EffectsConfig;
   dataStyle: DataStyleConfig;
 };
+

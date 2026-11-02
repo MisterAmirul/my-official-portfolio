@@ -41,7 +41,7 @@ export default function SkillsPage() {
     },
   ];
   return (
-    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
+    <Column maxWidth="m" fillWidth gap="xl" paddingY="12" horizontal="center">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -75,30 +75,62 @@ export default function SkillsPage() {
         <Heading as="h2" variant="display-strong-s">
           Learning Badges
         </Heading>
-        <div className="cert-grid">
-          {skills.certifications.map((cert, index) => (
-            <div key={index} className="cert-card">
-              {/* Wrapping the image so it takes up available vertical space */}
-              <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', paddingBottom: '16px' }}>
-                <Media
-                  radius="m"
-                  width={200}
-                  height={130}
-                  alt={cert.name}
-                  src={cert.image}
-                  style={{ objectFit: 'contain', width: "100%", height: "100%" }}
-                />
-              </div>
-              <SmartLink
-                suffixIcon="arrowUpRightFromSquare"
-                href={cert.link} 
-                target="_blank"
-                style={{ marginTop: 'auto' }} // Explicitly push to bottom
+        <div className="cert-showcase">
+          {skills.certifications.map((cert, index) => {
+            const isReverse = index % 2 === 1; // Alternates layout (Card 1: Image Left, Card 2: Image Right)
+            return (
+              <div
+                key={index}
+                className={`cert-horizontal-card ${isReverse ? "reverse" : ""}`}
               >
-                <Text variant="body-default-s">View badge</Text>
-              </SmartLink>
-            </div>
-          ))}
+                <div className="cert-image-container">
+<Media
+  alt={cert.title || cert.name}
+  src={cert.image}
+  style={{
+    objectFit: "cover", // 👈 Fills 100% of the container with no empty space
+    width: "100%",
+    height: "100%",
+    minHeight: "180px",
+  }}
+/>
+                </div>
+                <div className="cert-info-container">
+                  <Row gap="8" vertical="center" wrap>
+                    <Tag size="s" variant="neutral">
+                      {cert.name}
+                    </Tag>
+                    {cert.tag && (
+                      <Tag size="s" variant="brand">
+                        {cert.tag}
+                      </Tag>
+                    )}
+                  </Row>
+                  <Text variant="heading-strong-m">
+                    {cert.title || cert.name}
+                  </Text>
+                  {cert.description && (
+                    <Text variant="body-default-m" onBackground="neutral-weak">
+                      {cert.description}
+                    </Text>
+                  )}
+                  <Row paddingTop="8">
+                    <SmartLink
+                      suffixIcon="arrowUpRightFromSquare"
+                      href={cert.link}
+                      target="_blank"
+                    >
+                      <Text variant="body-default-s">
+                        {cert.name === "Microsoft Learn"
+                          ? "View Official Transcript"
+                          : "View Public Skills Profile"}
+                      </Text>
+                    </SmartLink>
+                  </Row>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </Column>
 
@@ -107,19 +139,61 @@ export default function SkillsPage() {
         <Heading as="h2" variant="display-strong-s">
           Involvements
         </Heading>
-        <div className="cert-grid">
-          {skills.engagements[0]?.images?.map((image, index) => (
-            <div key={index} className="cert-card">
-                <Media
-                  radius="m"
-                  width={200}
-                  height={130}
-                  alt={image.alt}
-                  src={image.src}
-                  style={{ objectFit: 'contain', width: "100%", height: "100%", }}
-                />
-            </div>
-            ))}
+        <div className="cert-showcase">
+          {skills.engagements.map((item, index) => {
+            const isReverse = index % 2 === 1; // Alternates layout (Card 1: Image Left, Card 2: Image Right)
+            return (
+              <div
+                key={index}
+                className={`cert-horizontal-card ${isReverse ? "reverse" : ""}`}
+              >
+                <div className="cert-image-container">
+                  <Media
+                    radius="m"
+                    alt={item.title || item.name}
+                    src={item.image}
+                    style={{
+                      objectFit: "cover",
+                      width: "100%",
+                      height: "100%",
+                      minHeight: "180px",
+                    }}
+                  />
+                </div>
+                <div className="cert-info-container">
+                  <Row gap="8" vertical="center" wrap>
+                    <Tag size="s" variant="neutral">
+                      {item.name}
+                    </Tag>
+                    {item.tag && (
+                      <Tag size="s" variant="brand">
+                        {item.tag}
+                      </Tag>
+                    )}
+                  </Row>
+                  <Text variant="heading-strong-m">
+                    {item.title || item.name}
+                  </Text>
+                  {item.description && (
+                    <Text variant="body-default-m" onBackground="neutral-weak">
+                      {item.description}
+                    </Text>
+                  )}
+                  {item.link && (
+                    <Row paddingTop="8">
+                      <SmartLink
+                        suffixIcon="arrowUpRightFromSquare"
+                        href={item.link}
+                        target="_blank"
+                      >
+                        <Text variant="body-default-s">View credential</Text>
+                      </SmartLink>
+                    </Row>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </Column>
 
@@ -128,9 +202,9 @@ export default function SkillsPage() {
         <Heading as="h2" variant="display-strong-s">
           Technical Skills
         </Heading>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
+        <div className="skills-grid">
           {skills.learning.map((category, index) => (
-            <Column key={index} gap="m" style={{ border: '0.25px solid #666', borderRadius: '8px', padding: '1.5rem' }}>
+            <Column key={index} gap="m" className="skill-card">
               <Text variant="heading-strong-s">{category.category}</Text>
               <Row wrap gap="8">
                 {category.skills.map((skill, skillIndex) => (

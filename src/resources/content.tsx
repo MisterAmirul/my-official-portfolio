@@ -5,15 +5,15 @@ const person: Person = {
   firstName: "Amirul",
   lastName: "Hezzat",
   name: ` Amirul Hezzat`,
-  role: "Backend Cloud Developer",
+  role: "Hybrid Cloud Engineer",
   avatar: "/images/persona-portfolio.jpg", 
   email: "example@gmail.com",
-  location: "Asia/Kuala_Lumpur", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Asia/Kuala_Lumpur", 
+  languages: ["Malay", "English", "Mandarin"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -25,7 +25,7 @@ const social: Social = [
   {
     name: "Curriculum Vitae",
     icon: "document",
-    link: "/images/Cv-AmirulHezzat.pdf",
+    link: "/images/CV-Official-AmirulHezzat.pdf",
     essential: true,
   },
   {
@@ -77,7 +77,7 @@ const home: Home = {
   subline: (
     <>
       <br />
-      This portfolio showcases my academic foundations, practical side-projects, credentials, skills, and hands-on lab blogs, highlighting my passion for building and exploring innovative technology.
+      This portfolio showcases my academic foundations, practical side-projects, credentials, and technical skills, highlighting my passion for building and exploring innovative technology.
       <br />
     </>
   ),
@@ -104,10 +104,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Amirul is a final-year Information Technology Diploma student at Universiti Kuala Lumpur MIIT, actively shaping his career toward becoming a Backend Cloud Developer. Driven by a curiosity for diverse technology domains, he embraces a T-shaped professional mindset, blending a broad understanding of IT ecosystems with deep technical specialization.
+        Amirul is a final-year Information Technology Diploma student at Universiti Kuala Lumpur MIIT, actively shaping his career as a Hybrid Cloud Engineer. Driven by a curiosity for diverse technology domains, he embraces a T-shaped professional mindset, blending a broad understanding of IT ecosystems with deep technical specialization in cloud and container infrastructure.
         <br />
         <br />
-        Through hands-on projects and continuous self-directed learning, he translates theoretical knowledge into production-ready solutions. His expertise spans Azure cloud infrastructure, AI integrations, full-stack web development, and deploying containerized applications utilizing Docker and Kubernetes.
+        Through hands-on projects and continuous self-directed learning, he translates theoretical knowledge into production-ready solutions. His expertise spans Azure and AWS cloud infrastructure, container orchestration utilizing Docker, Podman, and Kubernetes, serverless backends, and AI service integrations.
       </>
     ),
   },
@@ -116,12 +116,12 @@ const about: About = {
     title: "Studies",
     experiences: [
       {
-        company: "University Kuala Lumpur MIIT",
+        company: "Universiti Kuala Lumpur MIIT",
         timeframe: "July 2024 - December 2026",
         role: "Diploma in Information Technology",
         achievements: [
           <>
-            Completed extensive 6 semester of various syllabus learning covering fundamental of information technologies, multi-language programming, database, design principles, statistical analysis, discrete mathematics and more.
+            Completed extensive 6 semesters of various syllabus learning covering fundamental of information technology, multi-language programming, database, design principles, statistical analysis, discrete mathematics and more.
           </>,
           <>
             Engaged in real-world case studies, hands-on development projects, and ethical discussions, building a strong foundation in both theoretical and practical applications of technology.
@@ -129,18 +129,31 @@ const about: About = {
         ],
       },
       {
-company: "Professional Certifications & Training",
-        timeframe: "",
-        role: "Azure & AWS Cloud Tracks",
+        company: "Forward College x AWS re/Start(Project Ignite Cohort 5)",
+        timeframe: "October 2026 - February 2027",
+        role: "AWS Cloud Foundational Training",
         achievements: [
           <>
-            <strong>Azure AI 200 Cloud Developer:</strong> Currently preparing for the Azure AI Engineer Associate certification exam (expected 11 October 2026), focusing on maximizing Azure Services with AI integration.
+            Part-time (4 months) cloud engineering program with dedicated instructors, designed to equip students with enterprise cloud computing skills in Amazon Web Services.
           </>,
           <>
-            <strong>AWS Cloud Foundational:</strong> Participating in the Project Ignite training program (12 Oct 2026 - 27 Feb 2027) to expand multicloud infrastructure capabilities.
+            Intensive cloud engineering program covering AWS core compute, storage, IAM, Amazon Linux administration, and networking primitives.
           </>,
           <>
-            <strong>Platform Skill Badges:</strong> Earned multiple hands-on credentials across Microsoft Azure (AKS, Container Apps, Databricks) and Google Cloud (Cloud GPUs, MLOps Fundamentals, Kubernetes).
+            Executing hands-on labwork using the AWS Management Console to provision virtual compute workloads, manage file systems, manage networking and governance.
+          </>,
+        ],
+      },
+{
+        company: "Cloud Skill Badges & Coursework",
+        timeframe: "Continuous Upskilling",
+        role: "Azure & GCP Technical Credentials",
+        achievements: [
+          <>
+            <strong>Microsoft Azure (AI-200 & AZ-900):</strong> Completed AI-200 coursework (Former Exam Candidate) and AZ-900 foundationals. Earned technical badges covering Azure VM, Azure Networking, IAM, Container Apps, Azure Kubernetes Service, Event Grid, Data Services, Managed Redis, and OpenTelemetry.
+          </>,
+          <>
+            <strong>Google Cloud Platform:</strong> Earned hands-on technical skill badges in Google Kubernetes Engine (GKE), GPU Computation, and Machine Learning Operations (MLOps) Fundamentals.
           </>,
         ],
         images: [],
@@ -250,68 +263,71 @@ const skills: Skills = {
   description: `${person.name}'s certifications, learning journey, and technical skills`,
   
   certifications: [
-      {
-      name: "Google Cloud",
-      image: "/images/qualifications/syllabus1-ai200.png",
-      link: "https://learn.microsoft.com/api/achievements/share/en-us/MUHAMADAMIRULHEZZATBINWANAHMAD-3047/3ZBL3DBH?sharingId=194FC49822E4ED2A",
-    },
-    {
-      name: "Google Cloud",
-      image: "/images/qualifications/gke-gcp.png",
-      link: "https://www.skills.google/public_profiles/e364194e-4c7a-4471-bd36-959d262cbbbe/badges/24698269",
-    },
-    {
-      name: "Google Cloud",
-      image: "/images/qualifications/gpu-fund.png",
-      link: "https://www.skills.google/public_profiles/e364194e-4c7a-4471-bd36-959d262cbbbe/badges/24619248",
-    },
-
-
-    {
-      name: "Google Cloud",
-      image: "/images/qualifications/mlops-gs.png",
-      link: "https://www.skills.google/public_profiles/e364194e-4c7a-4471-bd36-959d262cbbbe/badges/24619248",
-    },
     {
       name: "Microsoft Learn",
-      image: "/images/qualifications/ms-data.png",
-      link: "https://learn.microsoft.com/api/achievements/share/en-us/MUHAMADAMIRULHEZZATBINWANAHMAD-3047/9RWCT8YU?sharingId=194FC49822E4ED2A",
+      title: "Azure Infrastructure & AI Workloads (AI-200 & AZ-900)",
+      description:
+        "Completed comprehensive AI-200 coursework (Former Exam Candidate) and earned AZ-900 foundational credentials. Gained verified badges in Azure services    fundamentals, Azure Kubernetes Service (AKS), Azure Container Apps (ACA), Azure Event Grid, Azure Data Services, Azure Managed Redis, and OpenTelemetry.",
+      tag: "15+ Modules Completed",
+      image: "/images/azure-glassmor.jpeg",
+      link: "https://learn.microsoft.com/en-us/users/muhamadamirulhezzatbinwanahmad-3047/transcript/v0g8way0jzm0q8e?tab=tab-modules",
+    },
+    {
+      name: "Google Skills",
+      title: "GCP Infrastructure, GKE & MLOps",
+      description:
+        "Earned verified skill badges and credentials across Google Kubernetes Engine (GKE), GPU Computation, and Machine Learning Operations (MLOps) Fundamentals, focusing on scalable containerized infrastructure and pipeline automation.",
+      tag: "Computation",
+      image: "/images/google-glassmor.jpeg",
+      link: "https://www.skills.google/public_profiles/e364194e-4c7a-4471-bd36-959d262cbbbe",
     },
   ],
   
-  engagements: [
+  engagements: [  
     {
-      images: [
-        { src: "/images/qualifications/google-hackt2026.png", alt: "Engagement 1" },
-        { src: "/images/qualifications/goonvidia.png", alt: "Engagement 2" },
-      ],
+      name: "Google Hackathon 2026",
+      title: "Google AI Hackathon — Certificate of Participation",
+      description:
+        "Attending the online developer talk and technical sessions hosted by GDG Campus UTM (Build with AI 2026), focusing on cloud-native AI workflows and industry insights.",
+      tag: "Tech Session",
+      image: "/images/qualifications/google-hackt2026.png",
+      link: "", // Leave empty if you don't have an external link, or paste a link here
+    },
+    {
+      name: "Google Cloud & NVIDIA",
+      title: "Google Cloud & NVIDIA Community Member",
+      description:
+        "Accessing technical learning materials, official documentation, and GPU-accelerated computing resources for modern AI workloads.",
+      tag: "Technical Resources",
+      image: "/images/qualifications/goonvidia.png",
+      link: "", // Leave empty if you don't have an external link, or paste a link here
     },
   ],
   
   learning: [
     {
-      category: "Web Development",
-      skills: ["TypeScript", "Node.js", "React", "PostgreSQL"],
+      category: "Languages",
+      skills: ["C#", "PHP", "TypeScript", "Python", "Swift", "Bash"],
     },
     {
       category: "Infrastructure",
-      skills: ["Azure Cloud Services", "Docker", "Kubernetes", "Local Server Configuration", "Nginx", "Blockchain"],
+      skills: ["Azure", "AWS", "Linux", "VPS", "Cloudflare", "DNS", "Nginx"],
     },
     {
-      category: "Artificial Intelligence",
-      skills: ["Statistical Analysis", "Model Development", "GPU Computing"],
+      category: "Containerization",
+      skills: ["Docker", "Podman", "Kubernetes"],
     },
       {
-      category: "Database",
-      skills: ["PostgreSQL", "NoSQL", "OpenAI Vector Embeddings models"],
+      category: "Databases",
+      skills: ["PostgreSQL", "Supabase", "NoSQL", "Vector Databases"],
     },
     {
-      category: "System Administration",
-      skills: ["Linux", "Bash", "Windows"],
+      category: "Frameworks",
+      skills: ["React", "Vite", "Node.js", "Web3", "iOS SDK"],
     },
     {
       category: "Tools",
-      skills: ["Git", "Github", "Flutter"],
+      skills: ["Git", "GitHub", "LLM Integration", "WebSockets", "OBS Studio", "Unity"],
     },
 
   ],

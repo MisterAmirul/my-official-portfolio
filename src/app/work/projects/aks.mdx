@@ -1,0 +1,68 @@
+---
+title: "Azure Kubernetes Service (AKS): Cloud Workload Deployment & Orchestration"
+publishedAt: "2026-10-15"
+summary: "Hands-on lab project focused on containerizing, orchestrating, and configuring resilient FastAPI workloads on Azure Kubernetes Service (AKS) as part of the Azure AI-200 Cloud Developer track."
+images:
+  - "/images/project/aks-logo.jpeg"
+team:
+  - name: "Amirul"
+    role: "Backend Cloud Developer"
+    avatar: "/images/myavatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/muhamad-amirul-hezzat-64864924a"
+link: "https://github.com/MisterAmirul/Azure-AI200-AKS"
+---
+
+## Overview
+
+As part of hands-on technical preparation for the **Microsoft Azure AI Engineer / Cloud Developer (AI-200)** pathway, this lab project explores end-to-end containerized workload orchestration using **Azure Kubernetes Service (AKS)**. 
+
+The labwork bridges practical application development with modern cloud-native deployment patterns. It covers packaging Python FastAPI backend services into lightweight container images using local build engines, integrating with **Azure Container Registry (ACR)**, provisioning a managed AKS cluster via infrastructure automation, and defining declarative Kubernetes manifests for automated deployment, dynamic configuration, and state persistence.
+
+---
+
+## Key Technical Objectives
+
+- **Containerization Pipeline**: Building optimized container images for Python backend microservices using Podman, bypassing cloud-build restrictions, and establishing secure push/pull pipelines with Azure Container Registry (ACR).
+- **AKS Cluster Provisioning**: Automating the setup of managed Kubernetes clusters using Python infrastructure scripts (`azdeploy.py`) with attached ACR role assignments (`AcrPull`) for passwordless image pull authentication.
+- **Dynamic Configuration & Security**: Decoupling hardcoded credentials and parameters from the application source code using Kubernetes `ConfigMaps` and base64-encoded `Secrets`.
+- **State Persistence**: Mounting Azure Managed Disks directly into the containerized pods via `PersistentVolumeClaims (PVC)` to ensure application access logs survive container crashes or rescheduling.
+- **Service Networking**: Exposing the internal pod network securely to the public internet using an Azure Load Balancer.
+
+---
+
+## Architecture & Workflow
+
+```text
+[ Local Fedora Environment / FastAPI App ]
+                │
+                ▼ (Podman Build)
+     [ Container Image ]
+                │
+                ▼ (Podman Login & Push via az credentials)
+ [ Azure Container Registry (ACR) ]
+                │
+       (Managed Identity / AcrPull)
+                ▼
+[ Azure Kubernetes Service (AKS) Cluster ]
+  ├── Master Node (Managed Azure Control Plane)
+  └── Worker Nodes 
+        ├── Deployment (Replicas, Pod Autoscaling)
+        ├── ConfigMaps & Secrets (Dynamic Injection)
+        ├── Persistent Volumes (Azure Managed Disks)
+        └── Service (External LoadBalancer)
+```
+
+---
+
+## Outcome & Learning
+
+- This lab successfully validated cloud-native operational skills critical for enterprise backend cloud development.
+- Demonstrated proficiency in translating standalone backend code into production-ready containerized microservices.
+- Handled persistent state and configuration injection within a stateless container environment.
+- Mastered declarative infrastructure lifecycle management on Microsoft Azure using local toolchains.
+- Reinforced foundational competencies directly aligned with the Microsoft Azure AI-200 syllabus.
+
+
+## Source Code
+
+Explore the full implementation, Dockerfiles, and Kubernetes manifests on [GitHub — MisterAmirul/Azure-AI200-AKS ↗](https://github.com/MisterAmirul/Azure-AI200-AKS).

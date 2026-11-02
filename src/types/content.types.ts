@@ -36,19 +36,19 @@ export type Skills = {
   description: string;
   certifications: {
     name: string;
+    title?: string;
+    description?: string;
+    tag?: string;
     image: string;
     link: string;
   }[];
   engagements: {
+    name: string;
     title?: string;
     description?: string;
-    date?: string;
-    images?: Array<{
-      src: string;
-      alt: string;
-      width?: number;
-      height?: number;
-    }>;
+    tag?: string;
+    image: string;
+    link?: string;
   }[];
   learning: {
     category: string;
