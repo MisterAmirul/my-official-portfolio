@@ -104,10 +104,10 @@ intro: {
   title: "Introduction",
   description: (
     <>
-      Amirul is a final-year Information Technology student at Universiti Kuala Lumpur MIIT, building a career as a Cloud Support Analyst. He approaches tech with a T-shaped mindset—pairing a broad understanding of the IT ecosystem with deep, hands-on expertise in cloud infrastructure and system troubleshooting.
+      Amirul is a final-year Information Technology student at Universiti Kuala Lumpur MIIT, building a career as a Cloud Support Analyst. He approaches tech with a T-shaped mindset,pairing with a broad understanding of the IT ecosystem with deep, hands-on expertise in cloud infrastructure and system troubleshooting.
       <br />
       <br />
-      Driven by curiosity and continuous learning, he turns technical theory into resilient, real-world solutions. His core toolkit spans AWS and Azure environments, Linux server administration, serverless backends, AI service integrations, and container deployment using Docker, Podman, and Kubernetes.
+      Driven by curiosity and continuous learning, he turns technical theory into resilient, real-world solutions. His core toolkit spans across AWS and Azure environments, Linux server administration, serverless backends, AI service integrations, and container deployment using Docker, Podman, and Kubernetes.
     </>
   ),
 },
