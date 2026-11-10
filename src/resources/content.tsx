@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Amirul",
   lastName: "Hezzat",
   name: ` Amirul Hezzat`,
-  role: "Hybrid Cloud Engineer",
+  role: "Cloud Support Analyst",
   avatar: "/images/persona-portfolio.jpg", 
   email: "example@gmail.com",
   location: "Asia/Kuala_Lumpur", 
@@ -99,18 +99,18 @@ const about: About = {
     display: true,
     link: "https://cal.com",
   },
-  intro: {
-    display: true,
-    title: "Introduction",
-    description: (
-      <>
-        Amirul is a final-year Information Technology Diploma student at Universiti Kuala Lumpur MIIT, actively shaping his career as a Hybrid Cloud Engineer. Driven by a curiosity for diverse technology domains, he embraces a T-shaped professional mindset, blending a broad understanding of IT ecosystems with deep technical specialization in cloud and container infrastructure.
-        <br />
-        <br />
-        Through hands-on projects and continuous self-directed learning, he translates theoretical knowledge into production-ready solutions. His expertise spans Azure and AWS cloud infrastructure, container orchestration utilizing Docker, Podman, and Kubernetes, serverless backends, and AI service integrations.
-      </>
-    ),
-  },
+intro: {
+  display: true,
+  title: "Introduction",
+  description: (
+    <>
+      Amirul is a final-year Information Technology student at Universiti Kuala Lumpur MIIT, building a career as a Cloud Support Analyst. He approaches tech with a T-shaped mindset—pairing a broad understanding of the IT ecosystem with deep, hands-on expertise in cloud infrastructure and system troubleshooting.
+      <br />
+      <br />
+      Driven by curiosity and continuous learning, he turns technical theory into resilient, real-world solutions. His core toolkit spans AWS and Azure environments, Linux server administration, serverless backends, AI service integrations, and container deployment using Docker, Podman, and Kubernetes.
+    </>
+  ),
+},
   work: {
     display: true, // set to false to hide this section
     title: "Studies",
