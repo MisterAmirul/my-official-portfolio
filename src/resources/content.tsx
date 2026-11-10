@@ -25,7 +25,7 @@ const social: Social = [
   {
     name: "Curriculum Vitae",
     icon: "document",
-    link: "/images/CV-AmirulHezzat-v1.pdf",
+    link: "/images/Official-CV-MuhamadAmirulHezzat.pdf",
     essential: true,
   },
   {
